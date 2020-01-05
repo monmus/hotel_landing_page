@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+<title>*** Hotel ***</title>
+</head>
+
+<body>
+<!-- hamburger menu -->
+<div class="hamburger-menu" id="hamburgerMenu">
+  <a class="nav-a ham-a" href="#about-link">about</a>
+  <a class="nav-a ham-a" href="#parallax-world-of-ugg">rooms</a>
+  <a class="nav-a ham-a" href="#about2">clients</a>
+  <a class="nav-a ham-a" href="#newsletter-link">newsletter</a>
+  <a class="nav-a ham-a" href="#">contact</a>
+</div>
+<!-- newsletter card -->
+<div class="ns-card" id="nsCard">
+  <button class="close-ns-card-btn" id="closeNsBtn" onclick="closeNsCard()">&times;</button>
+  <h2 id="nsName"></h2>
+  <p>thank you for joining our mailing list!<p>
+</div>
+<!-- navigation -->
+<div class="nav-container" id="navTop">
+    <button class="book-now" id="openBook" onclick="openBookBox()">book now!</button>
+    <div class="book-box" id="bookBox">
+        <label>check in</label>
+        <input type="date" class="book-input" />
+        <label>check out</label>
+        <input type="date" class="book-input" />
+        <button class="btn book-btn">book</button>
+    </div>
+
+
+    
+  <nav class="top-nav">
+    <a class="nav-a normal-nav" href="#about-link">about</a>
+    <a class="nav-a normal-nav" href="#parallax-world-of-ugg">rooms</a>
+    <a class="nav-a normal-nav" href="#about2">clients</a>
+    <a class="nav-a normal-nav" href="#newsletter-link">newsletter</a>
+    <a class="nav-a normal-nav" href="#">contact</a>
+    <a class="nav-a hamburger" id="hamburger" onclick="openHamburger()">&#9776;</a>
+  </nav>
+</div>
+<div class="main-container" id="mainContainer">
+  <!-- intro -->
+  <div class="section intro">
+    <!-- <div class="title-img"><img src="img/intro.jpg" /></div> -->
+    <div class="intro-img"></div>
+    <div class="see-more-btn btn"><a href="#about-link">see more</a></div>
+    
+  </div>
+  <!-- about section 1 -->
+  <div class="section about-1" id="about-link">
+    <div class='col-al col-al-center'>
+      <p>​Welcome to our unique boutique bed &amp; breakfast with a quiet garden, located in the centre of Tatras.​​​<br>​</p>
+    
+      <div class="slideshow-container">
+          <div class="mySlides1">
+            <img src="img/m1.jpg">
+          </div>
+        
+          <div class="mySlides1">
+            <img src="img/m2.jpeg">
+          </div>
+        
+          <div class="mySlides1">
+            <img src="img/m3.jpeg">
+          </div>
+        
+      </div>
+      
+      <p>​Villa Park is a chalet villa built in 1897, recently renovated and furnished with an eclectic mix of antique, modern and contemporary furniture and artworks, but still breathing the charm of the early 20th century.​​ <br>​</p>
+
+    </div>
+
+    <div class="section about-rooms" id="about-link">
+      <div class='col-al col-al-center'>
+
+         <div id="parallax-world-of-ugg">
+  
+          <section>
+            <div class="title">
+              <img src='img/arrow.png'>
+            </div>
+          </section>
+          
+          <section>
+              <div class="parallax-one">
+                <div class='overlay'>
+                <h2>OUR ROOMS</h2>
+                </div>
+              </div>
+          </section>
+          
+          <section>
+            <div class="block">
+              <p class="margin-top-10">Cosy bedrooms, three lovely parlors, two beautiful verandas, a stunning terrace and garden, charming hosts and a view to die for</p>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                  <img src="img/m4.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m5.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m6.jpeg">
+                </div>
+            </div>
+
+            <p class='test'>We have several individually designed double and single rooms and you are welcome to use the three ground floor parlors, equipped with cosy sofas, armchairs, a writing desk and tables. Cuddle up in front of the open fireplace or use the library to swap a book.​​ 
+                ​There are also two beautiful huge verandas, a covered terrace and the wild romantic garden, in which you may roam.​​</p>
+                
+                <div class="title">
+                    <img src='img/arrow.png'>
+                </div>
+          </section>
+          
+          <section>
+            <div class="parallax-two">
+              <h2>ECLECTIC, CHARMING, COSY</h2>
+            </div>
+          </section>
+          
+          <section>
+            <div class="block">
+              <p class="margin-top-10">Villa Park is a new kind of B&B combining contemporary living with history and modern art.</p>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                  <img src="img/m7.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m8.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m9.jpeg">
+                </div>
+            </div>
+
+            <div class="title">
+                <img src='img/arrow.png'>
+            </div>
+
+          </section>
+          
+          <section>
+            <div class="parallax-three">
+              <h2>AROUND TOWN</h2>
+            </div>
+          </section>
+          
+          <section>
+            <div class="block">
+              <p class="margin-top-10">Stunning nature, culture, shopping and more</p>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                  <img src="img/m10.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m11.jpeg">
+                </div>
+              
+                <div class="mySlides1">
+                  <img src="img/m12.jpeg">
+                </div>
+            </div>
+
+            <div class="title">
+                <img src='img/arrow.png'>
+            </div>
+
+            <div class="block">
+                <p class="margin-top-10">What our guests loved about their stay​</p>
+            </div>
+
+          </section>
+            
+          </div>
+       </div>
+    </div>
+
+  <!-- about section 2 -->
+  <div class="section about-2" id="about2">
+
+<div class="tiles-row">
+    <div class="small-container">
+      <article class="article-container">
+        <img class="small-image" src="img/g1.jpeg">
+        <div class="overlay">
+          <div class="text-image">
+            <p class="main-text">
+              <span>For design lovers. Perfect hospitality. Go there</span>
+              <span></span>
+            </p>
+            <p class="small-text">
+              <span>An old building that by the hands of two dreamers became an amazing place with extraordinary design that invites you to stay there for ever. Its really special!</span>
+              <span></span>
+            </p>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="article-container">
+        <img class="small-image" src="img/g2.jpeg">
+        <div class="overlay">
+          <div class="text-image">
+            <p class="main-text">
+              <span>Absolutely quaint B&amp;B with the most charming hostess!</span>
+              <span></span>
+            </p>
+            <p class="small-text">
+              <span>Perhaps the best thing about the stay was our hostess, Jadwiga She was incredibly service oriented and thoughtful hotelier. Authentically Mountain but globally minded, Jadwiga was able to connect with the guests, regardless country of origin!</span>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="article-container">
+        <img class="small-image" src="img/g3.jpeg">
+        <div class="overlay">
+          <div class="text-image">
+            <p class="main-text">
+              <span>This BnB is incredible!!</span>
+              <span></span>
+            </p>
+            <p class="small-text">
+              <span>The whole house is styled beautifully by Jadwiga and all of the little touches he has included made our stay so relaxing, enjoyable and very special. The breakfast and coffee is delicious, the rooms are gorgeous (with beautiful views of Tatras) and the grounds and common areas are perfect.</span>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="article-container">
+        <img class="small-image" src="img/g4.jpeg">
+        <div class="overlay">
+          <div class="text-image">
+            <p class="main-text">
+              <span>Absolutely amazing and adorable</span>
+              <span> </span>
+            </p>
+            <p class="small-text">
+              <span>You are blown away once you enter.  It's very electric with amazing photography and a view to die for. I would highly recommend it to anyone. It's great for a romantic getaway or a trip with friends. You are in for a lovely breakfast or tea and coffee with jams and bread.</span>
+              <span> </span>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  </div>
+  <!-- host -->
+  <div class="section about-rooms" id="about-link">
+      <div class='col-al col-al-center'>
+              
+  <div id="parallax-world-of-ugg">
+  <section>
+      <div class="parallax-four">
+        <h2>MEET YOUR HOSTS</h2>
+      </div>
+    </section>
+    <div class="section about-2" id="about2">
+
+        <div class="tiles-row1">
+            <div class="small-container1">
+              <article class="article-container1">
+                <img class="small-image1" src="img/f1.jpeg">
+                <div class="overlay1">
+                  <div class="text-image1">
+                    <p class="main-text1">
+                      <span>Jadwiga</span>
+                      <span></span>
+                    </p>
+                    <p class="small-text1">
+                      <span>Loves horses</span>
+                      <span></span>
+                    </p>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article class="article-container1">
+                <img class="small-image1" src="img/f2.jpeg">
+                <div class="overlay1">
+                  <div class="text-image1">
+                    <p class="main-text1">
+                      <span>Stefan</span>
+                      <span></span>
+                    </p>
+                    <p class="small-text1">
+                      <span>Art lover</span>
+                      <span></span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+              </div>
+              </div>
+
+  </div>
+  </div>
+  </div>
+
+
+ <!-- CONTACT-->
+
+
+  <section>
+      <div class="block-contact">
+  
+        <p class="margin-top-10">Villa Park <br> <br> Bukowina Tatrzanska 15c</p>
+        <p class="margin-top-10">E-mail <br> <br> villapark@gmail.com</p>
+        <p class="margin-top-10">Phone <br> <br> +48 123 456 789</p>
+    
+      </div>
+
+  </section>
+
+
+    <!-- FOOTER-->
+    
+    <section class="footer">
+      <p>©2019 Monika Bilska</p>
+    </section>
+  <!-- newsletter -->
+  <!-- <div class="section newsletter" id="newsletter-link">
+    <div class="col-ns col-ns-l">
+      <h2>Newsletter</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor, augue eu rutrum suscipit, est massa.</p>
+    </div>
+    <div class="col-ns col-ns-r">
+      <input class="input-ns" type="text" value="Name" id="inputName"/>
+      <input class="input-ns" type="email" value="E-mail" id="inputEmail" />
+      <button class="btn ns-send-btn" id="nsBtn" onclick="openNsCard()"/>join now!</button>
+    </div>
+  </div> -->
+  <!-- contact // footer -->
+  <!-- <footer class="section contact">
+    <p>&#xA9 <a href="https://www.linkedin.com/in/aleksandra-basinska/" target="_blank">Aleks Basinska</a> 2017</p>
+  </footer> -->
+
+<script src="js/js.js"></script>
+</body>
+</html>

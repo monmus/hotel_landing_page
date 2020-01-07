@@ -105,6 +105,12 @@ p {
   font-weight: 200;
   color: black;
   line-height: 1.2em;
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
 }
 
 a {
@@ -120,13 +126,15 @@ a {
   }
 }
 
-body, html {
-  margin: 10px;
+* {
+  margin: 10;
   padding: 0;
-  text-decoration: none;
-  height: 100%;
-  background-color: $body-bg;
+  box-sizing: border-box;
+  
+ 
 }
+
+
 
 /* ----- buttons style ----- */
 
@@ -161,9 +169,10 @@ body, html {
   &::before {
     content: "";
     position: absolute;
+    
     top: 0;
     left: 0;
-    width: 97.5%;
+    width: 100%;
     height: 100%;
     opacity: 0.5;
     background-color: $nav-bg;
@@ -171,12 +180,8 @@ body, html {
 }
 
 .top-nav {
-  // @include flex(row, wrap, flex-end);
   position: absolute;
- 
   width: 100%;
-  // top: 0;
-  // right: 0;
   padding: 16px 2.92%;
 }
 
@@ -304,101 +309,103 @@ body, html {
 .main-container {
   @include flex(column, nowrap, flex-start);
   width: 100%;
-}
-
-.section {
-  width: 100%;
-  position: relative;
-}
+  
+  .section {
+    position: relative;
+  }
 
 /* ----- header / intro ----- */
 
-@keyframes intro1 {
-  from {transform: scale(1.0);}
-  to {transform: scale(1.5);}
-}
-
-.intro {
-  @include flex(column, nowrap, center);
-  align-items: center;
-  position: relative;
-  min-height: 100%;
-  min-height: 100vh;
-  background-color: $a1-bg;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    @include img(url(../img/intro.jpeg));
-    animation: intro1 10s forwards infinite;
+  @keyframes intro1 {
+    from {transform: scale(1.0);}
+    to {transform: scale(1.5);}
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  .intro {
+    @include flex(column, nowrap, center);
+    align-items: center;
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
-    // @include gradient;
-    z-index: 1;
+    background-color: $a1-bg;
+    overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include img(url(../img/intro.jpeg));
+        animation: intro1 10s forwards infinite;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // @include gradient;
+        z-index: 1;
+      }
   }
-}
 
-.title-img {
-  width: 90%;
-  z-index: 2;
-  margin: 0;
+  .title-img {
+    width: 90%;
+    z-index: 2;
+    margin: 0;
 
-  img {
-    width: 100%;
-    background-size: cover;
-  }
-}
+    img {
+      width: 100%;
+      background-size: cover;
+    }
+  } 
 
-.see-more-btn {
-  background-color: transparent;
-  border: 1px solid $see-more-btn-border;
-  margin: 40px 20px;
-  padding: 15px 20px;
-  z-index: 2;
-  text-align: center;
-  overflow: auto;
+  .see-more-btn {
+    background-color: transparent;
+    border: 1px solid $see-more-btn-border;
+    margin: 40px 20px;
+    padding: 15px 20px;
+    z-index: 2;
+    text-align: center;
+    overflow: auto;
 
-  a {
-    margin: auto;
-    color: $p-light-clr;
-    padding: 0;
-
-    &:hover {
+    a {
+      margin: auto;
       color: $p-light-clr;
+      padding: 0;
+
+      &:hover {
+        color: $p-light-clr;
+      }
     }
   }
-}
 
 /* ----- about 1 section ----- */
 
-.about-1 {
-  @include flex(row, wrap, space-around);
-  background-color: white;
-  padding: 7px 0;
-}
+  .about-1 {
+    @include flex(row, wrap, space-around);
+    background-color: white;
+    padding: 7px 0;
+    @media screen and (max-width: 480px) {
+      width: 480px;
+    }
 
-.col-a1 {
-  width: 35%;
-  margin: 0 20px;
-}
+  .col-al-center {
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    p:nth-last-of-type(1){
+      font-size: 20px;
+      text-align: center;
+    }
 
-.col-al-center {
-  font-size: 40px;
-  text-align: center;
-  p:nth-last-of-type(1){
-    font-size: 20px;
-  }
+    @media screen and (max-width: 480px) {
+      width: 480px;
+    }
 
   .slideshow-container {  
     display:flex;
@@ -413,568 +420,287 @@ body, html {
       }
     }
   }
-}
-
-.col-a1-r {
-  p {
-    color: black;
+      
   }
-}
+  }
+
+
 
 /* ----- room section ------*/
 
 
 
 /* Override UGG site */
-#main {width: 100%; padding:0;}
-.content-asset p {margin:0 auto;}
-.breadcrumb {display:none;}
+  #main {width: 100%; padding:0;}
+  .content-asset p {margin:0 auto;}
+  .breadcrumb {display:none;}
 
-/* Helpers */
-/**************************/
-.margin-top-10 {padding-top:10px;}
-.margin-bot-10 {padding-bottom:10px;}
+  /* Helpers */
+  /**************************/
+  .margin-top-10 {padding-top:10px;}
+  .margin-bot-10 {padding-bottom:10px;}
 
-/* Typography */
-/**************************/
-// #parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
-#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:rgb(255, 255, 255); font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
-// #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
-#parallax-world-of-ugg p {font-family:'Work Sans', sans-serif; font-weight: 200; font-size:40px; line-height:1.2em;}
-// .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
-#parallax-world-of-ugg p.test {font-size: 20px}
+  /* Typography */
+  /**************************/
+  // #parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
+  #parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:rgb(255, 255, 255); font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+  // #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
+  #parallax-world-of-ugg p {font-family:'Work Sans', sans-serif; font-weight: 200; font-size:40px; line-height:1.2em;}
+  // .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+  #parallax-world-of-ugg p.test {font-size: 20px}
 
-.sc {color: #3b8595;}
-.ny {color: #3d3c3a;}
-.atw {color: #c48660;}
+  .sc {color: #3b8595;}
+  .ny {color: #3d3c3a;}
+  .atw {color: #c48660;}
 
-/* Section - Title */
-/**************************/
-#parallax-world-of-ugg .title {background: rgb(252, 251, 251); padding: 60px; margin:0 auto; text-align:center;}
-#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+  /* Section - Title */
+  /**************************/
+  #parallax-world-of-ugg .title {background: rgb(252, 251, 251); padding: 60px; margin:0 auto; text-align:center;}
+  #parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
 
-/* Section - Block */
-/**************************/
-#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto;}
-#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
-#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+  /* Section - Block */
+  /**************************/
+  #parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto;}
+  #parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+  #parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
 
-/* Section - Parallax */
-/**************************/
-#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1505692952047-1a78307da8f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1716&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1554612292-c175942fb8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1558597879-04d6dfc5216d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-#parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1574578831425-41dbec20aa5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-/* Extras */
-/**************************/
-#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+  /* Section - Parallax */
+  /**************************/
+  #parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1505692952047-1a78307da8f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1716&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+  #parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1554612292-c175942fb8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+  #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1558597879-04d6dfc5216d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+  #parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1574578831425-41dbec20aa5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+  /* Extras */
+  /**************************/
+  #parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
 
-/* Media Queries */
-/**************************/
-@media screen and (max-width: 959px) and (min-width: 768px) {
-  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
-}
-@media screen and (max-width: 767px) {
-  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
-  #parallax-world-of-ugg h2 {font-size:30px;}
-  #parallax-world-of-ugg .block {padding: 30px;}
-  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
-}
-@media screen and (max-width: 479px) {
-  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
-  #parallax-world-of-ugg .slideshow-container .mySlides1 {
-    width:100%;
-    display: flex;
-    flex-direction: column;
-  
-  img {
-    width: 100%;
-    display: block;
+  /* Media Queries */
+  /**************************/
+  @media screen and (max-width: 959px) and (min-width: 768px) {
+    #parallax-world-of-ugg .block {padding: 40px; width:620px;}
   }
-}
-}
+  @media screen and (max-width: 767px) {
+    #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+    #parallax-world-of-ugg h2 {font-size:30px;}
+    #parallax-world-of-ugg .block {padding: 10px;}
+    #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+  }
+  @media screen and (max-width: 479px) {
+    #parallax-world-of-ugg section .block {padding: 30px 15px; width:100%;}
+    .main-container .about-1 .about-rooms .col-a1 #parallax-world-of-ugg .slideshow-container .mySlides1 img {
+      width:40px;
+  }
+  #parallax-world-of-ugg p {font-size:20px;}
+  #parallax-world-of-ugg h2 {font-size:20px;}
+  }
 
 
 /* ----- about 2 section ----- */
 
-@keyframes svgAnimationA2 {
-  0% {stroke-dashoffset: -3200; fill: none;}
-  75% {stroke-dashoffset: 0; fill: none;}
-  85% {fill: rgba(225, 225, 225, 0.1);}
-  90% {fill: rgba(225, 225, 225, 0.4);}
-  95% {fill: rgba(225, 225, 225, 0.7);}
-  100% {stroke-dashoffset: 0; fill: rgba(225, 225, 225, 1.0); stroke-width: 1;}
-}
-
-.about-2 {
-  // @include flex(row, wrap, space-around);
-  align-items: center;
-  background-color: white;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-.tiles-row {
-  display: flex;
-  width: 72%;
-
-  @media only screen and (max-width: 1023px ){
-    flex-wrap: wrap;
+  @keyframes svgAnimationA2 {
+    0% {stroke-dashoffset: -3200; fill: none;}
+    75% {stroke-dashoffset: 0; fill: none;}
+    85% {fill: rgba(225, 225, 225, 0.1);}
+    90% {fill: rgba(225, 225, 225, 0.4);}
+    95% {fill: rgba(225, 225, 225, 0.7);}
+    100% {stroke-dashoffset: 0; fill: rgba(225, 225, 225, 1.0); stroke-width: 1;}
   }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 99%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #070707;
-    a{
-      text-decoration: none;
-    }
-  }
-
-  .article-container:hover .overlay {
-    opacity: 0.8;
-    .small-text{
-      transform: translateY(0);
-    }
-  }
-
-  .article-container{
-    position: relative;
-  }
-
-  .text-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    // text-align: center;
-    .main-text{
-      color: white;
-      font-size: 1.8rem;
-    }
-    .small-text {
-      color: white;
-      font-size: 1rem;
-      transform: translateY(10px);
-      transition: all 1s ease-out;
-    }
-  }
-
-  .small-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 1023px){
-      width: 100%;
-    }
-   
-    .article-container{
-      width: 50%;
-
-      @media only screen and (max-width: 550px){
-        width: 100%;
-      }
-    }
-    .small-image{
-      height: 65vh;
-      width: 100%;
-    }
-  }
-}
-
-
-
-.tiles-row1 {
-  display: flex;
-  width: 72%;
-
-  @media only screen and (max-width: 1023px ){
-    flex-wrap: wrap;
-  }
-
-  .overlay1 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 38px;
-    right: 0;
-    height: 98%;
-    width: 85%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #070707;
-    a{
-      text-decoration: none;
-    }
-  }
-
-  .article-container1:hover .overlay1 {
-    opacity: 0.8;
-    .small-text1{
-      transform: translateY(0);
-    }
-  }
-
-  .article-container1{
-    position: relative;
-  }
-
-  .text-image1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    // text-align: center;
-    .main-text1{
-      color: white;
-      font-size: 1.8rem;
-    }
-    .small-text1 {
-      color: white;
-      font-size: 1rem;
-      transform: translateY(10px);
-      transition: all 1s ease-out;
-    }
-  }
-
-  .small-container1 {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 1023px){
-      width: 100%;
-    }
-   
-    .article-container1{
-      width: 50%;
-
-      @media only screen and (max-width: 550px){
-        width: 100%;
-      }
-    }
-    .small-image1{
-      height: 53vh;
-      width: 80%;
-    }
-  }
-}
-
-}
-
-
-
-/* ----- newsletter section ----- */
-
-.newsletter {
-  @include flex(row, wrap, space-around);
-  background-color: $newsletter-bg;
-}
-
-.col-ns {
-  @include flex(column, nowrap, flex-start);
-  width: 40%;
-  margin: 50px 1%;
-}
-
-.col-ns-r {
-  align-items: center;
-}
-
-.col-ns-l {
-  h2 {
-    margin: 10px 0;
-  }
-  p {
-    margin: 0;
-  }
-}
-
-.input-ns {
-  width: 80%;
-  height: 50px;
-  margin: 15px auto;
-  padding: 2px 10px;
-  border-bottom: 1px solid rgba(225, 225, 225, 1);
-  border-top: 0px solid transparent;
-  border-left: 0px solid transparent;
-  border-right: 0px solid transparent;
-  background-color: transparent;
-  font: {
-    size: 1.125em;
-    family: $text;
-  }
-  color: $p-light-clr;
-  @include transition(0.5s);
-
-  &:focus{
-    outline: none;
-    border-bottom: 2px solid rgba(225, 225, 225, 0);
-    font-size: 1.25em;
-  }
-}
-
-.ns-send-btn {
-  margin-top: 50px;
-}
-
-// CONTACT - FOOTER
-
-.contact {
-  color:  #313335;
-  width:100%;
-  height: 63vh;
-  display: flex;
-  background-image: url("../img/back.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5);
-  padding: 6rem 5rem 3rem;
-  margin-bottom: 0px;
-  flex-wrap: wrap-reverse;
-  @media only screen and (max-width: 1023px) {
-    height: unset;
-    min-height: 800px;
-  }
-  @media only screen and (max-width: 440px) {
-    height: unset;
-    height: 80vh;
-    padding: 4px;
-  }
-  @media only screen and (max-width: 650px) {
-    height: unset;
-    height: 80vh;
-    padding: 4px;
-    width: 100%;
-  }
-  article {
-    width: 50%;
-    @media only screen and (max-width: 1023px) {
-      width: 100%;
-    }
-  }
-
-  .contacttext-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-      .social-icons {
-        height: 70px;
-        margin-bottom: 20px;
-          a{
-          i {
-                    font-size: 2em;
-                    padding: 10px;
-                    &.fa-linkedin {
-                      color: #24292E;
-                    }
-                    &.fa-at {
-                      color: #24292E;
-                    }
-                    &.fa-github {
-                      color: #24292E;
-                    }
-                  }
-                }
-      }
-    
-    
-    @media only screen and (max-width: 1023px) {
-      text-align: center;
-      font-size: 14px;
-    }
-    .contacttext-main {
-      padding: 5px;
-      @media only screen and (max-width: 1023px) {
-        padding: 0 9rem 1rem 9rem;
-      }
-      @media only screen and (max-width: 519px) {
-        padding: 1rem 3rem;
-      }
-    }
-    .contacttext-header {
-      padding: 2.5rem 0;
-    }
-    span {
-      font-weight: bold;
-    }
-  }
-
-  .contact-form {
-    display: flex;
+  .about-2 {
+    @include flex(row, wrap, space-around);
     align-items: center;
-    .form{
-      display: flex;
-      flex-direction: column;
+    background-color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  .tiles-row {
+    display: flex;
+    width: 72%;
+
+    @media only screen and (max-width: 1023px ){
+      flex-wrap: wrap;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 99%;
       width: 100%;
-      @media only screen and (max-width: 1023px) {
-        align-items: center;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #070707;
+      a{
+        text-decoration: none;
       }
-      @media only screen and (max-width: 400px) {
-        height: 46vh;
+    }
+
+    .article-container:hover .overlay {
+      opacity: 0.8;
+      .small-text{
+        transform: translateY(0);
       }
-      input,
-      textarea{
-        width: 80%;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        @media only screen and (max-width: 1023px) {
-          width: 60%;
-        }
-        @media only screen and (max-width: 519px) {
-          width: 95%;
-        }
-      }
-      textarea{
-        resize: none;
-        height: 7rem;
-      }
-      button {
-        width: 11rem;
-        background-color: #313335;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-        cursor: pointer;
-        border: none;
-        transition: background 250ms ease-in-out,
-        transform 150ms ease;
-        @media only screen and (max-width: 1023px) {
-          width: 50%;
-        }
-        @media only screen and (max-width: 519px) {
-          width: 100%;
-          display:flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        }
-        @media only screen and (max-width: 380px) {
-          width: 100%;
-          text-align: center;
-          display:flex;
-          justify-content: center;
-          align-items: center;
-        }
-        &:hover,
-        &:focus {
-          background: #313335;
-        }
-        &:focus {
-          outline: 1px solid #fff;
-          outline-offset: -4px;
-        }
-        &:active {
-          transform: scale(0.95);
-        }
-      }
-      .alert{
-        text-align:center;
+    }
+
+    .article-container{
+      position: relative;
+    }
+
+    .text-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      // text-align: center;
+      .main-text{
         color: white;
-        margin-top:10px;
-        width: 80%;
-        background-color: navy;
-        display: none;
-        @media only screen and (max-width: 519px) {
+        font-size: 1.8rem;
+      }
+      .small-text {
+        color: white;
+        font-size: 1rem;
+        transform: translateY(10px);
+        transition: all 1s ease-out;
+      }
+    }
+
+    .small-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: 1023px){
+        width: 100%;
+      }
+    
+      .article-container{
+        width: 50%;
+
+        @media only screen and (max-width: 550px){
           width: 100%;
-          display:flex;
-          justify-content: center;
-          align-items: center;
-          display: none;
         }
-        @media only screen and (max-width: 380px) {
-          width: 100%;
-          font-size: 15px;
-          display:flex;
-          text-align: center;
-          display: none;
-          position: relative;
-          bottom: -5px;
-          
-        }
+      }
+      .small-image{
+        height: 65vh;
+        width: 100%;
       }
     }
   }
-}
 
 
-/* ----- contact ----- */
 
-.block-contact {
-  display: flex;
-  justify-content: center;
+  .tiles-row1 {
+    display: flex;
+    width: 72%;
+
+    @media only screen and (max-width: 1023px ){
+      flex-wrap: wrap;
+    }
+
+    .overlay1 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 38px;
+      right: 0;
+      height: 98%;
+      width: 85%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #070707;
+      a{
+        text-decoration: none;
+      }
+    }
+
+    .article-container1:hover .overlay1 {
+      opacity: 0.8;
+      .small-text1{
+        transform: translateY(0);
+      }
+    }
+
+    .article-container1{
+      position: relative;
+    }
+
+    .text-image1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      // text-align: center;
+      .main-text1{
+        color: white;
+        font-size: 1.8rem;
+      }
+      .small-text1 {
+        color: white;
+        font-size: 1rem;
+        transform: translateY(10px);
+        transition: all 1s ease-out;
+      }
+    }
+
+    .small-container1 {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: 1023px){
+        width: 100%;
+      }
+    
+      .article-container1{
+        width: 50%;
+
+        @media only screen and (max-width: 550px){
+          width: 100%;
+        }
+      }
+      .small-image1{
+        height: 53vh;
+        width: 80%;
+      }
+    }
+  }
+
+  }
+
+
+  /* ----- contact ----- */
+
+  .block-contact {
+    display: flex;
+    justify-content: center;
+    
+    p {
+      margin: 100px;
+    }
+  }
+
+  /* ----- footer ----- */
+
+  .footer {
+    background-color: #313335;
+    height: 7rem;
+    color: white;
+    display: flex;
+    position: relative;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
   
-  p {
-    margin: 100px;
   }
 }
-
-/* ----- footer ----- */
-
-.footer {
-  background-color: #313335;
-  height: 7rem;
-  color: white;
-  display: flex;
-  position: relative;
-  padding-top: 20px;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
- 
-}
-
-
-/* ----- newsletter card ----- */
-
-.ns-card {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  width: 80%;
-  margin: auto;
-  background-color: $newsletter-bg;
-  z-index: 999;
-  text-align: center;
-  display: none;
-
-  h2 {
-    margin-top: 80px;
-  }
-}
-
-.close-ns-card-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font: {
-    size: 1.25em;
-    family: $text;
-  }
-  color: $p-light-clr;
-}
-
 /* ----- media ----- */
 
 @media screen and (max-width: 1200px) {
@@ -1001,13 +727,13 @@ body, html {
 }
 
 @media screen and (max-width: 1000px) {
-  h2 {
-    font-size: 2.25em;
-  }
+  // h2 {
+  //   font-size: 2.25em;
+  // }
 
-  p {
-    font-size: 1em;
-  }
+  // p {
+  //   font-size: 1em;
+  // }
 
   .book-now {
     display: none;
@@ -1043,44 +769,45 @@ body, html {
   }
 }
 
-@media screen and (max-width: 788px) {
-  .title-img {
-    width: 40%;
-    z-index: 2;
-    margin: 0;
-  }
+// @media screen and (max-width: 788px) {
+//   .title-img {
+//     width: 40%;
+//     z-index: 2;
+//     margin: 0;
+//   }
 
-  h2 {
-    font-size: 1.75em;
-  }
+//   h2 {
+//     font-size: 1.75em;
+//   }
 
-  .room-hidden p {
-      font-size: 1.125em;
-      line-height: 25px;
-      margin: 20px auto 15px auto;
-  }
+//   .room-hidden p {
+//       font-size: 1.125em;
+//       line-height: 25px;
+//       margin: 20px auto 15px auto;
+//   }
 
-  .box-client {
-    width: 70%;
-  }
+//   .box-client {
+//     width: 70%;
+//   }
 
-  .op-slide p {
-      font-size: 1em;
-  }
+//   .op-slide p {
+//       font-size: 1em;
+//   }
 
-  .clients {
-    max-height: 400px;
-  }
-}
+//   .clients {
+//     max-height: 400px;
+//   }
+// }
 
 @media screen and (max-width: 610px) {
-  .about-1, .newsletter, .block-contact, .about-2, #parallax-world-of-ugg {
+
+  .about-1, .newsletter {
     @include flex(column, wrap, space-around);
   }
 
   .col-a1, .col-ns {
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
   }
 
@@ -1102,11 +829,26 @@ body, html {
   }
 }
 
-@media screen and (max-width: 400px) {
-  .title-img {
-    width: 60%;
-    z-index: 2;
-    margin: 0;
+@media screen and (max-width: 480px) {
+  
+  // .title-img {
+  //   width: 60%;
+  //   z-index: 2;
+  //   margin: 0;
+  // }
+
+  .main-container, .col-a1, .col-ns, .col-al-center {
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+   
+    // .mySlides1>img {
+    //   width: 150px;
+    // }
+    p.margin-top-10 {
+      font-size: 20px;
+    }
+    
   }
 
   .btn {
@@ -1137,4 +879,17 @@ body, html {
       margin: 5px auto 5px auto;
   }
 
+  .block-contact {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    p.margin-top-10 {
+      margin: 5px;
+    }
+  }
+
+  .slideshow-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

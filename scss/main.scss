@@ -127,7 +127,7 @@ a {
 }
 
 * {
-  margin: 10;
+  margin: 10px;
   padding: 0;
   box-sizing: border-box;
   
@@ -455,7 +455,7 @@ a {
 
   /* Section - Title */
   /**************************/
-  #parallax-world-of-ugg .title {background: rgb(252, 251, 251); padding: 60px; margin:0 auto; text-align:center;}
+  #parallax-world-of-ugg .title {background: rgb(252, 251, 251); padding: 20px; margin:0 auto; text-align:center;}
   #parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
 
   /* Section - Block */
@@ -555,6 +555,7 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 100%;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -562,12 +563,16 @@ a {
       .main-text{
         color: white;
         font-size: 1.8rem;
+        text-align: center;
+        
       }
       .small-text {
         color: white;
         font-size: 1rem;
         transform: translateY(10px);
         transition: all 1s ease-out;
+        width: 100%;
+        text-align: center;
       }
     }
 

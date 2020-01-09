@@ -117,7 +117,7 @@ a {
   font: {
   size: 1.25em;
   family: $text;
-  weight: 600;
+  // weight: 600;
   }
   color: $nav-a-clr;
   text: {
@@ -155,84 +155,182 @@ a {
 }
 
 /* ----- top navigation ----- */
-
 .nav-container {
   position: fixed;
   width: 100%;
   height: 50px;
   z-index: 888;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+nav {
+    background-color: #fff;
+    padding-bottom: 0.5rem;
+    height: 50px;
+    position: fixed;
     width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-color: $nav-bg;
+    z-index: 10;
+    .nav-links {
+      text-align: center;
+      .nav-link {
+        display: inline-block;
+        padding: 0.6rem 0 0.3rem 0;
+        margin: 0 2rem 0 2rem;
+        color: black;
+        font-size: 1.2em;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: black;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
+    }
+    // Hamburger menu icon
+    .nav-icon {
+      display: none;
+      width: 40px;
+      height: 45px;
+      position: relative;
+      margin: 10px 20px 0 0;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: black;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .2s ease-in-out;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2), &:nth-child(3) {
+          top: 12px;
+        }
+        &:nth-child(4) {
+          top: 24px;
+        }
+      }
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 12px;
+            width: 0%;
+            left: 50%;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          &:nth-child(4) {
+            top: 12px;
+            width: 0%;
+            left: 50%;
+          }
+        }
+      }
+    }
   }
 }
 
-.top-nav {
-  @include flex(row, wrap, flex-end);
-  position: absolute;
-  width: 50%;
-  top: 0;
-  left: 0;
-  padding: 12px 2.92%;
-}
 
-.nav-a {
-  margin: 0 3%;
-  color: $nav-a-clr;
-  font: {
-    size: 0.9em;
-    weight: 400;
-  }
-  text-transform: uppercase;
-  @include transition(0.5s);
 
-  &:hover {
-    color: $nav-a-hover;
-    opacity: 0.8;
-  }
-}
 
-.hamburger-menu {
-  position: fixed;
-  top: 50px;
-  @include flex(column, nowrap, flex-start);
-  width: 100%;
-  height: 0;
-  z-index: 666;
-  text-align: center;
-  display: none;
-  overflow: hidden;
-  @include transition(0.5s);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    background-color: $nav-bg;
-  }
-}
+// .nav-container {
+//   position: fixed;
+//   width: 100%;
+//   height: 50px;
+//   z-index: 888;
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0.5;
+//     background-color: $nav-bg;
+//   }
+// }
+
+// .top-nav {
+//   @include flex(row, wrap, flex-end);
+//   position: absolute;
+//   width: 50%;
+//   top: 0;
+//   left: 0;
+//   padding: 12px 2.92%;
+// }
+
+// .nav-a {
+//   margin: 0 3%;
+//   color: $nav-a-clr;
+//   font: {
+//     size: 0.9em;
+//     weight: 400;
+//   }
+//   text-transform: uppercase;
+//   @include transition(0.5s);
+
+//   &:hover {
+//     color: $nav-a-hover;
+//     opacity: 0.8;
+//   }
+// }
+
+// .hamburger-menu {
+//   position: fixed;
+//   top: 50px;
+//   @include flex(column, nowrap, flex-start);
+//   width: 100%;
+//   height: 0;
+//   z-index: 666;
+//   text-align: center;
+//   display: none;
+//   overflow: hidden;
+//   @include transition(0.5s);
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0.8;
+//     background-color: $nav-bg;
+//   }
+// }
+
+// .hamburger {
+//   display: none;
+//   cursor: pointer;
+// }
 
 /* ----- booking box ----- */
 
 .book-now {
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 5.5%;
   width: 21%;
   height: 45px;
@@ -464,7 +562,7 @@ a {
   #parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1505692952047-1a78307da8f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1716&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
   #parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1554612292-c175942fb8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
   #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1558597879-04d6dfc5216d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-  #parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1574578831425-41dbec20aa5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+  #parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1544986581-efac024faf62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
   /* Extras */
   /**************************/
   #parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
@@ -504,6 +602,7 @@ a {
 
   .about-2 {
     @include flex(row, wrap, space-around);
+    padding: 5px;
     align-items: center;
     background-color: white;
     // padding: 50px 0;
@@ -684,18 +783,20 @@ a {
     
     p {
       margin: 100px;
+      font-size: 20px;
     }
   }
 
   /* ----- footer ----- */
 
   .footer {
+    width: 100%;
     background-color: #313335;
-    height: 7rem;
+    
     color: white;
     display: flex;
     position: relative;
-    padding-top: 20px;
+
     justify-content: center;
     align-items: center;
     font-size: 1rem;
@@ -883,7 +984,7 @@ a {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    p.margin-top-10 {
+    p.margin-top-10{
       margin: 5px;
     }
   }
@@ -909,6 +1010,43 @@ a {
         }
         
          
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      &.nav-collapse {
+      }
+      .nav-icon {
+        display: block;
+        z-index: 2;
+      }
+      .nav-links {
+        display: none;
+      }
+      .show-links {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        padding-top: 8vh;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(#ffffff, #ffffff, rgba(255, 255, 255, 0.2));
+        background-color: rgba(255, 255, 255, 0.6);
+        animation: smooth .5s ease-in-out;
+        .nav-link {
+          display: block;
+          padding: 17px 0;
+          &:hover:before {
+            visibility: hidden;
+          }
+        }
+      }
     }
   }
 }

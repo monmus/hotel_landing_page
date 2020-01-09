@@ -78,16 +78,32 @@ function openBookBox() {
   }
   
   /* ----- hamburger -----*/
-  function openHamburger() {
-    var hamburgerBtn = document.getElementById("hamburger");
-    var menu = document.getElementById("hamburgerMenu");
+  // function openHamburger() {
+  //   var hamburgerBtn = document.getElementById("hamburger");
+  //   var menu = document.getElementById("hamburgerMenu");
   
-    if(menu.style.height !== "180px") {
-      menu.style.height = "180px";
-    }
-    else {
-      menu.style.height = "0";
-    }
-  }
+  //   if(menu.style.height !== "180px") {
+  //     menu.style.height = "180px";
+  //   }
+  //   else {
+  //     menu.style.height = "0";
+  //   }
+  // }
+const menuIcon = document.querySelector('.nav-icon');
+const menuLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
+// const introduction = document.querySelector('.introduction-box');
+// const arrow = document.querySelector('.arrow-box');
+
+let toggleMenu = () => {
+  // introduction.classList.toggle('hide');
+  // arrow.classList.toggle('hide');
+  menuIcon.classList.toggle('open');
+  menuLinks.classList.toggle('show-links');
+  nav.classList.toggle('nav-collapse');
+};
+
+menuIcon.addEventListener('click', toggleMenu);
+menuLinks.addEventListener('click', toggleMenu);
 
   

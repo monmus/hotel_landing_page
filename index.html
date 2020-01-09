@@ -8,12 +8,12 @@
 
 <body>
 <!-- hamburger menu -->
-<div class="hamburger-menu" id="hamburgerMenu">
+<!-- <div class="hamburger-menu" id="hamburgerMenu">
   <a class="nav-a ham-a" href="#about-link">about</a>
   <a class="nav-a ham-a" href="#parallax-world-of-ugg">rooms</a>
   <a class="nav-a ham-a" href="#about2">clients</a>
   <a class="nav-a ham-a" href="#">contact</a>
-</div>
+</div> -->
 
 <!-- navigation -->
 <div class="nav-container" id="navTop">
@@ -27,14 +27,33 @@
     </div>
 
 
-    
+
+
+
+
+<nav>
+    <div class="nav-links">
+      <a class="nav-link" href="#about-link">about</a>
+      <a class="nav-link" href="#parallax-world-of-ugg">rooms</a>
+      <a class="nav-link" href="#about2">clients</a>
+      <a class="nav-link" href="#contact">contact</a>
+    </div>
+    <div class="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+<!--     
   <nav class="top-nav">
     <a class="nav-a normal-nav" href="#about-link">about</a>
     <a class="nav-a normal-nav" href="#parallax-world-of-ugg">rooms</a>
     <a class="nav-a normal-nav" href="#about2">clients</a>
     <a class="nav-a normal-nav" href="#">contact</a>
     <a class="nav-a hamburger" id="hamburger" onclick="openHamburger()">&#9776;</a>
-  </nav>
+  </nav> -->
 </div>
 
 <div class="main-container" id="mainContainer">
@@ -251,35 +270,36 @@
   </div>
   </div>
 </div>
+
   <!-- host -->
-  <div class="section about-rooms" id="about-link">
-      <div class='col-al col-al-center'>
+<div class="section about-rooms" id="about-link">
+  <div class='col-al col-al-center'>
               
-  <div id="parallax-world-of-ugg">
-  <section>
-      <div class="parallax-four">
-        <h2>MEET YOUR HOSTS</h2>
-      </div>
-    </section>
+    <div id="parallax-world-of-ugg">
+      <section>
+        <div class="parallax-four">
+          <h2>MEET YOUR HOSTS</h2>
+        </div>
+      </section>
+
     <div class="section about-2" id="about2">
 
-        <div class="tiles-row1">
-            <div class="small-container1">
-              <article class="article-container1">
-                <img class="small-image1" src="img/f1.jpeg">
-                <div class="overlay1">
-                  <div class="text-image1">
-                    <p class="main-text1">
-                      <span>Jadwiga</span>
+      <div class="tiles-row1">
+        <div class="small-container1">
+          <article class="article-container1">
+            <img class="small-image1" src="img/f1.jpeg">
+              <div class="overlay1">
+                <div class="text-image1">
+                  <p class="main-text1">
+                      <span>Stenia</span>
                       <span></span>
-                    </p>
-                    <p class="small-text1">
+                  </p>
+                  <p class="small-text1">
                       <span>Loves horses</span>
                       <span></span>
-                    </p>
-                    </a>
-                  </div>
+                  </p>
                 </div>
+              </div>
               </article>
               <article class="article-container1">
                 <img class="small-image1" src="img/f2.jpeg">
@@ -296,20 +316,20 @@
                   </div>
                 </div>
               </article>
-              </div>
-              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
 
-  </div>
-  </div>
-  </div>
 
 
  <!-- CONTACT-->
 
   <section>
-      <div class="block-contact">
+      <div class="block-contact" id='contact'>
   
-        <p class="margin-top-10">Villa Park <br> <br> Bukowina Tatrzanska 15c</p>
+        <p class='margin-top-10'>Villa Park <br> <br> Bukowina Tatrzanska 15c</p>
         <p class="margin-top-10">E-mail <br> <br> villapark@gmail.com</p>
         <p class="margin-top-10">Phone <br> <br> +48 123 456 789</p>
     
@@ -319,8 +339,10 @@
 
     <!-- FOOTER-->
     
-    <section class="footer">
-      <p>©2019 Monika Bilska</p>
+    <section>
+      <div class="footer">
+       <p>©2019 Monika Bilska</p>
+      </div>
     </section>
   
 </div>

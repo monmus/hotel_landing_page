@@ -82,10 +82,12 @@ function openBookBox() {
     var hamburgerBtn = document.getElementById("hamburger");
     var menu = document.getElementById("hamburgerMenu");
   
-    if(menu.style.height !== "200px") {
-      menu.style.height = "200px";
+    if(menu.style.height !== "180px") {
+      menu.style.height = "180px";
     }
     else {
       menu.style.height = "0";
     }
   }
+
+  

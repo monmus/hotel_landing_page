@@ -106,12 +106,16 @@ p {
   color: black;
   line-height: 1.2em;
 
-  @media screen and (max-width: 485px) {
+  @media screen and (max-width: 480px) and (min-width: 370px) {
     font-size: 20px;
     text-align: center;
     vertical-align: middle;
+   
 }
 }
+
+
+
 
 a {
   font: {
@@ -160,6 +164,9 @@ a {
   width: 100%;
   height: 50px;
   z-index: 888;
+  top: 0;
+  left: 0;
+  
 
 nav {
     background-color: #fff;
@@ -249,82 +256,6 @@ nav {
     }
   }
 }
-
-
-
-
-
-// .nav-container {
-//   position: fixed;
-//   width: 100%;
-//   height: 50px;
-//   z-index: 888;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.5;
-//     background-color: $nav-bg;
-//   }
-// }
-
-// .top-nav {
-//   @include flex(row, wrap, flex-end);
-//   position: absolute;
-//   width: 50%;
-//   top: 0;
-//   left: 0;
-//   padding: 12px 2.92%;
-// }
-
-// .nav-a {
-//   margin: 0 3%;
-//   color: $nav-a-clr;
-//   font: {
-//     size: 0.9em;
-//     weight: 400;
-//   }
-//   text-transform: uppercase;
-//   @include transition(0.5s);
-
-//   &:hover {
-//     color: $nav-a-hover;
-//     opacity: 0.8;
-//   }
-// }
-
-// .hamburger-menu {
-//   position: fixed;
-//   top: 50px;
-//   @include flex(column, nowrap, flex-start);
-//   width: 100%;
-//   height: 0;
-//   z-index: 666;
-//   text-align: center;
-//   display: none;
-//   overflow: hidden;
-//   @include transition(0.5s);
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.8;
-//     background-color: $nav-bg;
-//   }
-// }
-
-// .hamburger {
-//   display: none;
-//   cursor: pointer;
-// }
 
 /* ----- booking box ----- */
 
@@ -444,7 +375,6 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        // @include gradient;
         z-index: 1;
       }
   }
@@ -486,9 +416,6 @@ nav {
     @include flex(row, wrap, space-around);
     background-color: white;
     padding: 7px 0;
-    // @media screen and (max-width: 480px) {
-    //   width: 480px;
-    // }
 
   .col-al-center {
     width: 100%;
@@ -504,6 +431,7 @@ nav {
     width: 100%;
     justify-content: center;
     align-items: center;
+    
     .mySlides1{
       img{
       margin:0;
@@ -540,7 +468,7 @@ nav {
   // #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
   #parallax-world-of-ugg p {font-family:'Work Sans', sans-serif; font-weight: 200; font-size:40px; line-height:1.2em;}
   // .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
-  #parallax-world-of-ugg p.test {font-size: 20px}
+ 
 
   .sc {color: #3b8595;}
   .ny {color: #3d3c3a;}
@@ -578,14 +506,13 @@ nav {
     #parallax-world-of-ugg .block {padding: 10px;}
     #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
   }
-  @media screen and (max-width: 481px) {
-    #parallax-world-of-ugg section .block {padding: 30px 15px; width:100%;}
-  //   .main-container .about-1 .about-rooms .col-a1 #parallax-world-of-ugg .slideshow-container .mySlides1 img {
-  //     width:40px;
-  // }
-  #parallax-world-of-ugg p {font-size:20px;}
-  #parallax-world-of-ugg h2 {font-size:20px;}
-  #parallax-world-of-ugg .margin-top-10 {font-size:20px;}
+  @media screen and (max-width: 481px) and (min-width: 370px) {
+  #parallax-world-of-ugg p {font-size:20px; text-align: justify}
+  #parallax-world-of-ugg h2 {font-size:20px; text-align: center; padding: 20px}
+  #parallax-world-of-ugg .margin-top-10 {font-size:20px; text-align: center; margin:10px}
+  #parallax-world-of-ugg section .block {padding: 30px; width:100%;}
+  #parallax-world-of-ugg section .block p {font-size:20px; text-align: center}
+  #parallax-world-of-ugg section p {font-size:20px; text-align: center; padding: 20px}
   }
 
 
@@ -605,7 +532,6 @@ nav {
     padding: 5px;
     align-items: center;
     background-color: white;
-    // padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -654,7 +580,6 @@ nav {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      // text-align: center;
       .main-text{
         color: white;
         font-size: 1.8rem;
@@ -737,7 +662,6 @@ nav {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      // text-align: center;
       .main-text1{
         color: white;
         font-size: 1.8rem;
@@ -829,13 +753,6 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-  // h2 {
-  //   font-size: 2.25em;
-  // }
-
-  // p {
-  //   font-size: 1em;
-  // }
 
   .book-now {
     display: none;
@@ -870,35 +787,35 @@ nav {
   }
 }
 
-// @media screen and (max-width: 788px) {
-//   .title-img {
-//     width: 40%;
-//     z-index: 2;
-//     margin: 0;
-//   }
+@media screen and (max-width: 788px) {
+  .title-img {
+    width: 40%;
+    z-index: 2;
+    margin: 0;
+  }
 
-//   h2 {
-//     font-size: 1.75em;
-//   }
+  h2 {
+    font-size: 1.75em;
+  }
 
-//   .room-hidden p {
-//       font-size: 1.125em;
-//       line-height: 25px;
-//       margin: 20px auto 15px auto;
-//   }
+  .room-hidden p {
+      font-size: 1.125em;
+      line-height: 25px;
+      margin: 20px auto 15px auto;
+  }
 
-//   .box-client {
-//     width: 70%;
-//   }
+  .box-client {
+    width: 70%;
+  }
 
-//   .op-slide p {
-//       font-size: 1em;
-//   }
+  .op-slide p {
+      font-size: 1em;
+  }
 
-//   .clients {
-//     max-height: 400px;
-//   }
-// }
+  .clients {
+    max-height: 400px;
+  }
+}
 
 @media screen and (max-width: 610px) {
 
@@ -930,26 +847,13 @@ nav {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width: 370px){
   
-  // .title-img {
-  //   width: 60%;
-  //   z-index: 2;
-  //   margin: 0;
-  // }
-
+ 
   .main-container, .col-a1, .col-ns, .col-al-center {
     text-align: center;
     width: 100%;
     margin: 10px auto;
-   
-    // .mySlides1>img {
-    //   width: 150px;
-    // }
-    p.margin-top-10 {
-      font-size: 20px;
-    }
-    
   }
 
   .btn {
@@ -1015,7 +919,7 @@ nav {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  {
   .nav-container {
     nav {
       display: flex;
@@ -1047,6 +951,25 @@ nav {
           }
         }
       }
+    }
+  }
+  .slideshow-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    .mySlides1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 80%;
+        img {
+        padding: 5px;
+        }
+        
+         
     }
   }
 }

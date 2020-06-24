@@ -181,6 +181,11 @@ a.contact {
   top: 0;
   left: 0;
   font-family: $text;
+  .grey {
+    background-color: #6e6868;
+    opacity: 0.8;
+   
+  }
 
   .hotel {
     font-family: $text;
@@ -312,18 +317,18 @@ nav {
             top: 12px;
             width: 0%;
             left: 50%;
-            background: grey;
+            background: white;
           }
           &:nth-child(2) {
             transform: rotate(45deg);
-            background: grey;
+            background: white;
           }
           &:nth-child(3) {
             transform: rotate(-45deg);
-            background: grey;
+            background: white;
           }
           &:nth-child(4) {
-            background: grey;
+            background: white;
             top: 12px;
             width: 0%;
             left: 50%;
@@ -1109,12 +1114,12 @@ nav {
         height: 100vh;
         color: grey;
         background-image: linear-gradient(#ffffff, #ffffff, rgba(255, 255, 255, 0.2));
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(7, 7, 7, 0.6);
         animation: smooth .5s ease-in-out;
         .nav-link {
           display: block;
           padding: 17px 0;
-          color: grey;
+          color: rgb(68, 68, 68);
           &:hover:before {
             visibility: hidden;
           }

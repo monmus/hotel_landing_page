@@ -116,11 +116,11 @@ $(window).scroll(function() {
 });
 
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 50) {
-      $( ".nav-links" ).addClass('grey');
-  } else {
-      console.log('there');
-      $( ".nav-links" ).removeClass('grey');
-  }
-});
+// $(window).scroll(function() {
+//   if ($(this).scrollTop() > 50) {
+//       $( ".nav-links" ).addClass('grey');
+//   } else {
+//       console.log('there');
+//       $( ".nav-links" ).removeClass('grey');
+//   }
+// });

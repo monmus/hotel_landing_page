@@ -106,4 +106,21 @@ let toggleMenu = () => {
 menuIcon.addEventListener('click', toggleMenu);
 menuLinks.addEventListener('click', toggleMenu);
 
-  
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+      $( ".nav-container" ).addClass('grey');
+  } else {
+      console.log('there');
+      $( ".nav-container" ).removeClass('grey');
+  }
+});
+
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+      $( ".nav-links" ).addClass('grey');
+  } else {
+      console.log('there');
+      $( ".nav-links" ).removeClass('grey');
+  }
+});

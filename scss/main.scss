@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
@@ -80,7 +86,7 @@ $footer-text-clr: #fff;
 
 /* ----- fonts ----- */
 
-$text: 'Work Sans';
+$text: 'Noto Sans';
 $header: 'Julius Sans One';
 $header-2: 'Pacifico';
 
@@ -101,10 +107,9 @@ h2 {
 
 p {
   font-size: 30px;
-  font-family: $text;
+  font-family: 'Work Sans';
   font-weight: 200;
-  // color: black;
-  line-height: 1.2em;
+  
 
   @media screen and (max-width: 480px) and (min-width: 370px) {
     font-size: 20px;
@@ -128,6 +133,15 @@ a {
     decoration: none;
     // transform: lowercase;
   }
+  
+}
+
+a.contact {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgb(22, 20, 20);
+      font-family: 'Work Sans';
+      
 }
 
 * {
@@ -139,18 +153,18 @@ a {
 /* ----- buttons style ----- */
 
 .btn {
-  border: 2px solid #fff;
+  // border: 2px solid #fff;
   background-color: transparent;
   color: $p-light-clr;
   font-size: 1.25em;
-  font-family: $text;
+  font-family: 'Dancing Script', cursive;
   @include transition(0.3s);
   padding: 5px 10px;
   overflow: auto;
 
   &:hover {
     transform: scale(1.2);
-    border: 1px solid rgba(225, 225, 225, 0.0);
+    // border: 1px solid rgba(225, 225, 225, 0.0);
   }
 
   &:focus {
@@ -166,24 +180,76 @@ a {
   z-index: 888;
   top: 0;
   left: 0;
+  font-family: $text;
+
+  .hotel {
+    font-family: $text;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    font-family: 'Great Vibes', cursive;
+  }
+  
+
+ 
+  
+  .fa::before{
+    padding: 5px;
+    height: 14px;
+    color: white;
+    position: relative;
+    left: 0px;
+    @media screen and (max-width: 480px) and (min-width: 370px){
+      display: none
+    }
+  }
+
+  span.test{
+    color: white;
+    display: inline-block;
+    // padding: 0.6rem 0 0.3rem 0;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    background-color: none;
+    @media screen and (max-width: 480px) and (min-width: 370px){
+      display: inline-block;
+    }
+    
+  }
+
+  
   
 
 nav {
-    background-color: #fff;
+    // background-color: #fff;
     padding-bottom: 0.5rem;
     height: 50px;
     position: fixed;
     width: 100%;
     z-index: 10;
+    .show-links {
+      .nav-link{
+        color: black;
+      }
+    }
     .nav-links {
       text-align: center;
       .nav-link {
+        font-family: $text;
         display: inline-block;
         padding: 0.6rem 0 0.3rem 0;
         margin: 0 2rem 0 2rem;
-        color: black;
-        font-size: 1.2em;
-        font-weight: 200;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 0;
+        font-weight: 400;
         position: relative;
         &:before {
           content: "";
@@ -192,7 +258,7 @@ nav {
           height: 1px;
           bottom: 0;
           left: 0;
-          background-color: black;
+          background-color: white;
           visibility: hidden;
           transform: scaleX(0);
           transition: all 0.3s ease-in-out 0s;
@@ -206,19 +272,22 @@ nav {
     // Hamburger menu icon
     .nav-icon {
       display: none;
-      width: 40px;
+      width: 33px;
       height: 45px;
       position: relative;
-      margin: 10px 20px 0 0;
+      margin: 7px 20px 0 0;
       transform: rotate(0deg);
       transition: .5s ease-in-out;
       cursor: pointer;
+      .text {
+        margin-top: 40px;
+      }
       span {
         display: block;
         position: absolute;
         height: 3px;
         width: 100%;
-        background: black;
+        background: white;
         border-radius: 9px;
         opacity: 1;
         left: 0;
@@ -235,19 +304,25 @@ nav {
         }
       }
       &.open {
+        
         span {
+      
           &:nth-child(1) {
             top: 12px;
             width: 0%;
             left: 50%;
+            background: grey;
           }
           &:nth-child(2) {
             transform: rotate(45deg);
+            background: grey;
           }
           &:nth-child(3) {
             transform: rotate(-45deg);
+            background: grey;
           }
           &:nth-child(4) {
+            background: grey;
             top: 12px;
             width: 0%;
             left: 50%;
@@ -256,6 +331,10 @@ nav {
       }
     }
   }
+}
+
+.grey {
+  background-color: rgb(157, 151, 184);
 }
 
 /* ----- booking box ----- */
@@ -395,10 +474,10 @@ nav {
 
   .see-more-btn {
     background-color: transparent;
-    border: 1px solid $see-more-btn-border;
+    // border: 1px solid $see-more-btn-border;
     margin: 40px 20px;
     padding: 15px 20px;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     overflow: auto;
 
@@ -406,7 +485,8 @@ nav {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-
+      font-family: 'Great Vibes', cursive;
+      font-size: 50px;
       &:hover {
         color: $p-light-clr;
       }
@@ -418,7 +498,7 @@ nav {
   .about-1 {
     @include flex(row, wrap, space-around);
     background-color: white;
-    padding: 15px 0;
+    padding: 35px 0;
 
   .col-al-center {
     width: 100%;
@@ -496,6 +576,7 @@ nav {
   #parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1554612292-c175942fb8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3)}
   #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../img/okolice1.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5)}
   #parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../img/hosts.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5)}
+  #parallax-world-of-ugg .parallax-five {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("../img/hosts.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center; box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5)}
   /* Extras */
   /**************************/
   #parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
@@ -509,7 +590,7 @@ nav {
     #parallax-world-of-ugg .block {padding: 30px; width:100%;}
     #parallax-world-of-ugg h2 {font-size:30px;}
     #parallax-world-of-ugg .block {padding: 10px;}
-    #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three, #parallax-world-of-ugg .parallax-four {padding-top:100px; padding-bottom:100px;}
+    #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three, #parallax-world-of-ugg .parallax-four, #parallax-world-of-ugg .parallax-five {padding-top:100px; padding-bottom:100px;}
   }
   @media screen and (max-width: 481px) and (min-width: 370px) {
   #parallax-world-of-ugg p {font-size:20px; }
@@ -522,7 +603,8 @@ nav {
   #parallax-world-of-ugg .parallax-two { overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1554612292-c175942fb8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-attachment: unset; background-size: contain; -moz-background-size: contain; -webkit-background-size: contain; background-repeat: no-repeat; background-position: center center;}
   #parallax-world-of-ugg .parallax-three { overflow: hidden; position: relative; width: 100%; background-image: url("../img/okolice1.jpg"); background-attachment: unset; background-size: contain; -moz-background-size: contain; -webkit-background-size: contain; background-repeat: no-repeat; background-position: center center;}
   #parallax-world-of-ugg .parallax-four { overflow: hidden; position: relative; width: 100%; background-image: url("../img/hosts.jpg"); background-attachment: unset; background-size: contain; -moz-background-size: contain; -webkit-background-size: contain; background-repeat: no-repeat; background-position: center center;}
-  }
+  #parallax-world-of-ugg .parallax-five { overflow: hidden; position: relative; width: 100%; background-image: url("../img/hosts.jpg"); background-attachment: unset; background-size: contain; -moz-background-size: contain; -webkit-background-size: contain; background-repeat: no-repeat; background-position: center center;}  
+}
 
 
 /* ----- about 2 section ----- */
@@ -722,31 +804,70 @@ nav {
   /* ----- contact ----- */
 
   .block-contact {
-    
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-bottom: 15px;
-    background-image: url("../img/contact.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.6);
-    text-align: center;
-    width: auto;
+    //  width: auto;
+ 
+    .text{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  
+      .header{
+        font-weight: 500;
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+        padding: 10px;
+      }
+
     
-    
-    .text, p {
-      margin: 30px;
-      font-size: 20px;
-      font-weight: 500;
-      color: rgb(22, 20, 20);
+    }
+
+    hr {
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+     
+    }
+    .test{
+      width: auto;
+    }
+
+    .weather{
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 480px) and (min-width: 370px){
+        flex-wrap: wrap;
+      }
     }
   
+    .center{
+      display: flex;
+      justify-content: center;
+
+      @media screen and (max-width: 480px) and (min-width: 370px){
+        flex-direction: column;
+      }
+      p {
+      margin: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgb(22, 20, 20);
+      font-family: 'Work Sans';
+      text-align: center;
+    
+    }
+    }
+    
+    p {
+      text-align: center;
+    }
   }
 
-  .test {
-    background-size: cover;
-  }
 
   /* ----- footer ----- */
 
@@ -893,7 +1014,7 @@ nav {
   .main-container, .col-a1, .col-ns, .col-al-center {
     text-align: center;
     width: 100%;
-    margin: 10px auto;
+    margin: auto;
   }
 
   .btn {
@@ -972,6 +1093,7 @@ nav {
       }
       .nav-links {
         display: none;
+        color: grey;
       }
       .show-links {
         display: block;
@@ -980,12 +1102,14 @@ nav {
         padding-top: 8vh;
         width: 100%;
         height: 100vh;
+        color: grey;
         background-image: linear-gradient(#ffffff, #ffffff, rgba(255, 255, 255, 0.2));
         background-color: rgba(255, 255, 255, 0.6);
         animation: smooth .5s ease-in-out;
         .nav-link {
           display: block;
           padding: 17px 0;
+          color: grey;
           &:hover:before {
             visibility: hidden;
           }

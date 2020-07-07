@@ -4,11 +4,30 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 <!-- <link rel="stylesheet" href="https://path/to/font-awesome/css/font-awesome.min.css"> -->
-<script src="https://kit.fontawesome.com/7414e22221.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Noto+Sans&display=swap" rel="stylesheet">
 <title>Willa u Steni</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $("html").on("submit","#contact_form",function(e){
+      e.preventDefault();
+      $("#send_form_status").html('').hide();
+      var data=$("#contact_form").serialize();
+      $.post("/send_form.php",data,function(res){
+        $("#send_form_status").html(res.msg).show();
+        if(res.status==1){ 
+          $("#contact_form")[0].reset();
+        } 
+      });
+    });
+  });
+  </script>
+
 </head>
 
 <body>
@@ -120,6 +139,7 @@
             </div> -->
             <div class='block'>
             <p>W naszym pensjonacie dysponujemy pokojami 2, 3 i 4 osobowymi. Możecie śmiało korzystać również z dolnego poziomu gdzie znajduje się jadalnia, miejsce gdzie można poczytać i ogrzać się przy kominku. Przed pensjonatem czeka na Was piękny, cichy ogród idealny do odpoczynku po górskich wycieczkach.​​</p>
+            <a href="./oferta.html"><p class="oferta btn">ZOBACZ OFERTĘ</p></a>
             </div>   
                 <div class="title">
                     <img src='img/arrow.png'>
@@ -177,29 +197,47 @@
             <div class="title">
                 <img src='img/arrow.png'>
             </div>
+          </section>
 
             <section>
               <div class="parallax-five">
                 <div class="section-overlay-mask">
-                <h2>TUTAJ OCENY BOOKINGU ITD</h2>
+                <h2>NASI GOŚCIE</h2>
                 </div>
               </div>
             </section>
 
+            <section>
             <div class="block">
-                <p>Co podobało się naszym Gościom podczas pobytu​</p>
+            <p>Co podobało się naszym Gościom podczas pobytu​</p>
+            
             </div>
-
           </section>
         </div>    
     </div>  
 
   <!-- about section 2 -->
   <div class="section about-2" id="about2">
+    
 
+    <div class="slider" id="main-slider"><!-- outermost container element -->
+      <div class="slider-wrapper"><!-- innermost wrapper element -->
+      <p class="slide">Bardzo przytulne miejsce, doskonała lokalizacja z pięknym widokiem na góry <br><br> Magdalena</p>
+      <p class="slide">Pyszne, różnorodne śniadania, można było spróbować wyrobów ze spiżarni Pani Steni, apartament czyściutki, zadbany, utrzymany w fajnym klimacie, super :) <br><br>Dagmara</p>
+      <p class="slide">Przemili właściciele i przesympatyczna obsługa. Widoki zapierające dech w piersi.. a przede wszystkim cisza. Polecam w 100% <br><br>Edyta</p>
+      <p class="slide">Zanim wyjdziesz, zjesz pyszne śniadanie. Wrócisz - czeka obiad... Czysto, ciepło, miło... Piękne widoki. W pobliżu nieduży, ale dobrze przygotowany stok <br><br>Jakub</p>
+      <p class="slide">Przepyszne śniadania, piękne widoki z okien pokojów, możliwość zamówienia obiadów na miejscu, blisko do Tatr i Pienin <br><br>Andrzej</p>
+      <p class="slide">Bardzo ładne widoki. Pokoje czyste, przestronne. Otoczenie willi bardzo czyste i urządzone ze smakiem. Pani Stenia zawsze uśmiechnięta i życzliwa. Ostoja spokoju. Polecam bardzo <br><br>Sławek</p>
+    </div>
+    </div>	
+    <img src="img/booking.jpg" class="section-overlay-mask">
+  </div>
+    
+    
+<!-- 
   <div class="tiles-row">
     <div class="small-container">
-      <article class="article-container">
+      <article class="article-container" id="1">
         <img class="small-image" src="img/g1.1.jpg">
         <div class="overlay">
           <div class="text-image">
@@ -215,7 +253,7 @@
           </div>
         </div>
       </article>
-      <article class="article-container">
+      <article class="article-container" id="2">
         <img class="small-image" src="img/g2.2.jpg">
         <div class="overlay">
           <div class="text-image">
@@ -230,7 +268,7 @@
           </div>
         </div>
       </article>
-      <article class="article-container">
+      <article class="article-container" id="3">
         <img class="small-image" src="img/g3.jpeg">
         <div class="overlay">
           <div class="text-image">
@@ -245,7 +283,7 @@
           </div>
         </div>
       </article>
-      <article class="article-container">
+      <article class="article-container" id="4">
         <img class="small-image" src="img/g4.jpeg">
         <div class="overlay">
           <div class="text-image">
@@ -263,7 +301,7 @@
     </div>
   </div>
   </div>
-</div>
+</div> -->
 
   <!-- host -->
 <div class="section about-rooms" id="about-link">
@@ -320,13 +358,12 @@
 
   <section>
       <div class="block-contact" id='contact'>
-        <!-- <iframe class="test" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5198.592890817748!2d20.05933471506395!3d49.34653747933835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf3cf76405e75bae!2sWilla%20u%20Steni%20Tatry%20Najpi%C4%99kniejsze%20widoki!5e0!3m2!1spl!2spl!4v1592131991714!5m2!1spl!2spl" width="auto" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" background-size="cover"></iframe> -->
           <div class="text">
             <p class="margin-top-10 header">Willa u Steni</p>
           </div>
 
           <hr>
-       
+       <div class="form">
           <div class="center">
             <div class="one">
               <p class='margin-top-10'>WILLA U STENI <br> <br> ul. Wierchy 12 <br> 34-425 Biały Dunajec</p>
@@ -340,6 +377,25 @@
             <p class="margin-top-10">504 192 535</p> -->
             </div>
           </div>
+
+          <div class="center1">
+            <p class="margin-top-10">Formularz kontaktowy</p>
+            <br>
+            <div id="send_form_status"></div>
+            <form method="post" action="/send_form.php" id="contact_form">
+                 <!-- <div><label for="name">Imię i nazwisko</label></div> -->
+                 <div><input type="text" name="name" id="name" class="formField" placeholder="Imię i nazwisko" /></div>
+                 <!-- <div><label for="phone">Numer telefonu</label></div> -->
+                 <div><input type="text" name="phone" id="phone" class="formField" placeholder="Numer telefonu" /></div>
+                 <!-- <div><label for="email">Adres email</label></div> -->
+                 <div><input type="text" name="email" id="email" class="formField" placeholder="Adres email" /></div>
+                 <!-- <div><label for="message">Treść wiadomości</label></div> -->
+                 <div><textarea name="message" id="message" class="formField" placeholder="Treść wiadomości"></textarea></div>
+                 <div><button id="sendBtn">Wyślij</button></div>
+            </form>
+        </div>
+
+          </div>
         
           <hr>
 
@@ -348,13 +404,12 @@
           <iframe class="test" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5198.592890817748!2d20.05933471506395!3d49.34653747933835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf3cf76405e75bae!2sWilla%20u%20Steni%20Tatry%20Najpi%C4%99kniejsze%20widoki!5e0!3m2!1spl!2spl!4v1592131991714!5m2!1spl!2spl" width="50%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" background-size="cover"></iframe>
           
           <hr>
-
-          <a class="weatherwidget-io" href="https://forecast7.com/pl/49d3520d05/gliczarow-gorny/" data-label_1="GLICZARÓW GÓRNY" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="3" data-theme="pure" >GLICZARÓW GÓRNY WEATHER</a>
+         
+          <a class="weatherwidget-io" href="https://forecast7.com/pl/49d3520d05/gliczarow-gorny/" data-label_1="GLICZARÓW GÓRNY" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="3" data-theme="pure">GLICZARÓW GÓRNY WEATHER</a>
           <script>
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
           </script>
-          <!-- <script type="text/javascript" src="http://www.pogodynka.pl/widget/getwides/gliczarow-dolny_bialy-dunajec/?background-color=FFFFFF&text-color=FFBB44"></script> -->
-
+          
         </div>
       
   </section>
@@ -368,8 +423,11 @@
     </section>
   
 </div>
+
+<!-- <script src="https://kit.fontawesome.com/7414e22221.js"></script> -->
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/js.js"></script>
+
 
 </body>
 </html>

@@ -110,6 +110,7 @@ p {
   font-size: 25px;
   font-family: 'Work Sans';
   font-weight: 200;
+  text-align: center;
   
 
   @media screen and (max-width: 480px) and (min-width: 370px) {
@@ -139,7 +140,7 @@ a {
 
 a.contact {
       font-size: 15px;
-      font-weight: 300;
+      font-weight: 500;
       color: rgb(19, 17, 17);
       font-family: 'Work Sans';
       
@@ -490,8 +491,8 @@ nav {
         top: 0;
         left: 0;
         width: 100%;
-        @include img(url(../img/m8.jpeg));
-        background-position: bottom;
+        @include img(url(../img/m13.jpg));
+        background-position: center;
         animation: intro1 10s forwards infinite;
         box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
       }
@@ -506,6 +507,8 @@ nav {
         z-index: 1;
       }
   }
+
+
 
 
 
@@ -602,7 +605,7 @@ nav {
   // #parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
   #parallax-world-of-ugg h2 { font-size:70px; letter-spacing:5px; padding: 10px; text-align:center; color:rgb(255, 253, 248); font-weight:500; text-transform:uppercase; z-index:10; opacity:.9;}
   // #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
-  #parallax-world-of-ugg p {font-family:'Work Sans', sans-serif; font-weight: 200; font-size:30px; text-align:center; line-height:1.2em;}
+  #parallax-world-of-ugg p {font-family:'Work Sans', sans-serif; font-weight: 200; font-size:25px; text-align:center; line-height:1.2em;}
   // .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
   #parallax-world-of-ugg p.oferta {
     margin: 10px;
@@ -907,6 +910,7 @@ nav {
       text-align: center;
       display: flex;
       justify-content: center;
+      margin-top: 20px;
       // flex-direction: column;
   
       .header{
@@ -962,7 +966,7 @@ nav {
       width: 50%;
       // text-align: center;
 
-      .one, .two, .three{
+      .one, .two, .three, .four{
         display: flex;
         justify-content: center;
       }
@@ -971,7 +975,7 @@ nav {
       p {
       margin: 10px;
       font-size: 15px;
-      font-weight: 300;
+      font-weight: 500;
       color: rgb(19, 17, 17);
       font-family: 'Work Sans';
       text-align: center;
@@ -983,11 +987,15 @@ nav {
       display: flex;
       flex-direction: column;
       font-family: 'Work Sans';
-      font-weight: 200;
+      font-weight: 500;
+      color: rgb(19, 17, 17);
 
       p {
         text-align: left;
         font-family: 'Work Sans';
+        color: rgb(19, 17, 17);
+        font-weight: 400;
+        font-size: 17px;
         
       }
 

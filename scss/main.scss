@@ -107,9 +107,9 @@ h2 {
 }
 
 p {
-  font-size: 25px;
+  font-size: 15px;
   font-family: 'Work Sans';
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
   
 
@@ -157,7 +157,7 @@ a.contact {
 .btn {
   // border: 2px solid #fff;
   background-color: transparent;
-  color: $p-light-clr;
+  // color: $p-light-clr;
   font-size: 1.25em;
   font-family: 'Dancing Script', cursive;
   @include transition(0.3s);
@@ -509,6 +509,16 @@ nav {
   }
 
 
+  .oferta.btn{
+  margin: 10px;
+  color: grey;
+  font-weight: 500;
+  font-family: 'Work Sans';
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}
 
 
 

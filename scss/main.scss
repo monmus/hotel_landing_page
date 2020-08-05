@@ -178,7 +178,7 @@ a.contact {
 .nav-container {
   position: fixed;
   width: 100%;
-  height: 105px;
+  height: 97px;
   z-index: 888;
   top: 0;
   left: 0;
@@ -475,12 +475,12 @@ nav {
 
 //oferta
 
-  .intro.oferta {
+  .intro_static.oferta {
     @include flex(column, nowrap, center);
     align-items: center;
     position: relative;
     
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     background-color: $a1-bg;
     overflow: hidden;
@@ -493,8 +493,93 @@ nav {
         width: 100%;
         @include img(url(../img/m13.jpg));
         background-position: center;
-        animation: intro1 10s forwards infinite;
-        box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
+        // animation: intro1 10s forwards infinite;
+        // box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+  }
+
+
+  .oferta.btn{
+  margin: 10px;
+  color: grey;
+  font-weight: 500;
+  font-family: 'Work Sans';
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}
+
+
+
+  .title-img {
+    width: 90%;
+    z-index: 2;
+    margin: 0;
+
+    img {
+      width: 100%;
+      background-size: cover;
+    }
+  } 
+
+  .see-more-btn_oferta {
+    background-color: transparent;
+    // border: 1px solid $see-more-btn-border;
+    margin: 40px 20px;
+    padding: 15px 20px;
+    z-index: 1;
+    text-align: center;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+
+    a {
+      margin: auto;
+      color: $p-light-clr;
+      padding: 0;
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      text-align: center;
+      &:hover {
+        color: $p-light-clr;
+      }
+    }
+  }
+
+
+//oferta - wyciag
+
+  .intro_static.stacja_narciarska {
+    @include flex(column, nowrap, center);
+    align-items: center;
+    position: relative;
+    
+    min-height: 50vh;
+    width: 100%;
+    background-color: $a1-bg;
+    overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        @include img(url(../img/stacja1.jpg));
+        background-position: bottom;
+        // animation: intro1 10s forwards infinite;
+        // box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
       }
 
       &::after {
@@ -560,7 +645,7 @@ nav {
 /* ----- oferta specjalna----- */
 
 
-.intro_static.oferta_specjalna {
+.intro_static.oferta_specjalna_wigilia {
   @include flex(column, nowrap, center);
   align-items: center;
   position: relative;
@@ -577,6 +662,110 @@ nav {
       left: 0;
       width: 100%;
       @include img(url(../img/merry.jpg));
+      background-position: center;
+      // animation: intro1 10s forwards infinite;
+      // box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+}
+
+ul.list {
+  padding-left: 25px;
+  text-align: left;
+  list-style-type: none;
+  li {
+    position: relative;
+    padding-left: 25px;
+  }
+  li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b4976d;
+
+  }
+}
+
+
+.oferta.btn{
+margin: 10px;
+color: grey;
+font-weight: 500;
+font-family: 'Work Sans';
+&:hover{
+  color: black;
+  cursor: pointer;
+}
+}
+
+
+
+.title-img {
+  width: 90%;
+  z-index: 2;
+  margin: 0;
+
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+} 
+
+.see-more-btn {
+  background-color: transparent;
+  // border: 1px solid $see-more-btn-border;
+  margin: 40px 20px;
+  padding: 15px 20px;
+  z-index: 1;
+  text-align: center;
+  overflow: auto;
+
+  a {
+    margin: auto;
+    color: $p-light-clr;
+    padding: 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    &:hover {
+      color: $p-light-clr;
+    }
+  }
+}
+
+
+
+
+.intro_static.oferta_specjalna_sylwester {
+  @include flex(column, nowrap, center);
+  align-items: center;
+  position: relative;
+  
+  min-height: 50vh;
+  width: 100%;
+  background-color: $a1-bg;
+  overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @include img(url(../img/happy.jpg));
       background-position: center;
       // animation: intro1 10s forwards infinite;
       // box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
@@ -660,7 +849,6 @@ font-family: 'Work Sans';
     }
   }
 }
-
 
 
 
@@ -815,7 +1003,7 @@ font-family: 'Work Sans';
     img {
       background-repeat: no-repeat; background-position: center center; box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5);
       @media screen and (max-width: 481px) and (min-width: 370px){
-        height: 145px;
+        // height: 145px;
       }
     }
 
@@ -1121,7 +1309,22 @@ font-family: 'Work Sans';
 
       .formField{width: 87%; font-family: 'Work Sans'; border-bottom: 1px solid #ccc; border-top: 1px #ccc; border-left: 1px #ccc; border-right: 1px #ccc; border-radius: 3px; margin: 3px 0 10px 0; padding: 10px 3px}
 textarea.formField{border: 1px solid #ccc; width: 350px; height: 70px}
-#sendBtn{cursor:pointer;background: #ccc; background: linear-gradient(#ddd 0, #eee 100%); border: 1px solid #ccc; line-height: 32px; font-size: 14px;padding: 0 25px; border-radius: 3px}
+#sendBtn {
+  cursor:pointer;
+  background: #b4976d;
+  color: white;
+  // background: linear-gradient(rgb(168, 167, 167) 0, #eee 100%); 
+  border: 1px solid #ccc; 
+  line-height: 32px; 
+  font-size: 14px;
+  padding: 0 25px; 
+  border-radius: 3px;
+  &:hover{
+    background-color: #4e4e4d;
+    cursor: pointer;
+}
+}
+
 #send_form_status{border: 1px dashed #ccc;display: none; padding: 0 10px; margin: 10px 0}
 .status_ok{color: #060}
 .status_err{color: #F00};

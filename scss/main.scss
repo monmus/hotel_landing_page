@@ -2429,19 +2429,20 @@ a.contact {
         z-index: 1;
         padding-top: 8vh;
         width: 100%;
+        top: -10px;
         height: 100vh;
         color: grey;
-        background-image: linear-gradient(
-          #ffffff,
-          #ffffff,
-          rgba(255, 255, 255, 0.2)
-        );
-        background-color: rgba(7, 7, 7, 0.6);
+        // background-image: linear-gradient(
+        //   #ffffff,
+        //   #ffffff,
+        //   rgba(255, 255, 255, 0.2)
+        // );
+        background-color: #c66f6f;
         animation: smooth 0.5s ease-in-out;
         .nav-link {
           display: block;
           padding: 17px 0;
-          color: rgb(68, 68, 68);
+          color: white;
           &:hover:before {
             visibility: hidden;
           }
@@ -2451,7 +2452,7 @@ a.contact {
           margin: 2px;
           padding: 10px;
           font-size: 29px;
-          color: black !important;
+          color: white !important;
           text-align: center;
           position: relative;
           justify-content: center;

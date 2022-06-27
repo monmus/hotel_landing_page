@@ -205,6 +205,7 @@ $(window).scroll(function () {
   });
 })();
 
+//lesna chata
 const slider = document.querySelector(".slider");
 const sliderContent = document.querySelector(".item-wrapper");
 const sliderItems = sliderContent.querySelectorAll("img");
@@ -279,6 +280,82 @@ const init = () => {
 };
 
 init();
+
+//niedzwiedzia chata
+var slider1 = document.querySelector(".slider1");
+var sliderContent1 = document.querySelector(".item-wrapper1");
+var sliderItems1 = sliderContent1.querySelectorAll("img");
+var itemCount1 = sliderItems1.length;
+var prevBtn1 = document.querySelector("#previous1");
+var nextBtn1 = document.querySelector("#next1");
+var indicatorWrapper1 = document.querySelector(".indicator-wrapper1");
+
+let currentIndex1 = 0;
+
+var handleButtonClick1 = (direction) => {
+  if (direction === "left") {
+    currentIndex1++;
+
+    if (currentIndex1 > itemCount1 - 1) {
+      currentIndex1 = 0;
+    }
+  } else {
+    currentIndex1--;
+
+    if (currentIndex1 < 0) {
+      currentIndex1 = itemCount1 - 1;
+    }
+  }
+
+  moveSlide1();
+  styleIndicator1();
+};
+
+var handleIndicatorClick1 = (e) => {
+  if (!e.target.classList.contains("indicator")) return;
+
+  currentIndex1 = e.target.dataset.index;
+
+  moveSlide1();
+  styleIndicator1();
+};
+
+var initIndicators1 = () => {
+  for (let i = 0; i < itemCount1; i++) {
+    var indicator1 = document.createElement("div");
+    indicator1.classList.add("indicator");
+    indicator1.dataset.index = i;
+    indicatorWrapper1.appendChild(indicator1);
+  }
+
+  styleIndicator1();
+};
+
+var styleIndicator1 = () => {
+  var indicators1 = indicatorWrapper1.querySelectorAll(".indicator");
+  indicators1.forEach((indicator1) => indicator1.classList.remove("current"));
+  indicators1[currentIndex1].classList.add("current");
+};
+
+var moveSlide1 = () => {
+  var sliderWidth = slider1.clientWidth;
+  sliderContent1.style.transform = `translateX(-${
+    currentIndex1 * sliderWidth
+  }px)`;
+};
+
+var addEventListeners1 = () => {
+  prevBtn1.addEventListener("click", () => handleButtonClick1("left"));
+  nextBtn1.addEventListener("click", () => handleButtonClick1("right"));
+  indicatorWrapper1.addEventListener("click", handleIndicatorClick1);
+};
+
+var init1 = () => {
+  addEventListeners1();
+  initIndicators1();
+};
+
+init1();
 
 window.onload = () => {
   const downButton = document.querySelector(".down-button");

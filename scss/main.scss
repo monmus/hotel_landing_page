@@ -507,7 +507,7 @@ a.contact {
       top: 0;
       left: 0;
       width: 100%;
-      @include img(url(../img/intro.jpg));
+      @include img(url(../img/okolice2.jpg));
       // background-position: center bottom;
       animation: intro1 10s forwards infinite;
       opacity: 1.4;
@@ -1937,9 +1937,10 @@ a.contact {
     }
 
     .slider {
-      width: 349px;
+      // width: 349px;
       // margin: 2em auto;
       text-align: center;
+      // margin-right: 0px;
     }
 
     .slider-wrapper {
@@ -1948,6 +1949,9 @@ a.contact {
       position: relative;
       text-align: center;
       margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .slide {

@@ -1599,7 +1599,7 @@ a.contact {
   .about-rooms {
     // @include flex(row, wrap, space-around);
     background-color: white;
-    // padding-top: 45px;
+    padding-top: 20px;
 
     .col-al-center {
       width: 100%;
@@ -2467,7 +2467,7 @@ a.contact {
 @media screen and (max-width: 610px) {
   .about-1,
   .newsletter {
-    margin-top: 15px;
+    // margin-top: 15px;
     @include flex(column, wrap, space-around);
   }
 

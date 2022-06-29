@@ -99,6 +99,7 @@ let toggleMenu = () => {
   menuIcon.classList.toggle("open");
   menuLinks.classList.toggle("show-links");
   nav.classList.toggle("nav-collapse");
+  bon.classList.toggle("bon-display");
   // $(".hotel").remove();
 };
 

@@ -422,6 +422,15 @@ a.contact {
   }
 }
 
+.bon {
+  height: 130px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+
 .grey {
   background-color: black;
   opacity: 0.8;
@@ -2607,7 +2616,7 @@ a.contact {
         padding-top: 8vh;
         width: 100%;
         top: -10px;
-        height: 100vh;
+        height: 102vh;
         color: grey;
 
         .dropbtn {

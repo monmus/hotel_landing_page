@@ -115,10 +115,11 @@ $(window).scroll(function () {
     $(".nav-container").addClass("grey");
     $(".nav-link").addClass("white-font").removeClass("black-font");
     $(".nav-container .hotel").css("color", "white");
-    $(".d-flex a").css("color", "white");
+    $(".icon a").css("color", "white");
     $(".nav-icon span").addClass("white").removeClass("black");
     $(".nav-container .hotel-show").css("color", "white");
     $(".hotel").show();
+    $(".dropbtn").css("color", "white");
   } else {
     console.log("there");
     $(".nav-container").removeClass("grey");
@@ -126,7 +127,8 @@ $(window).scroll(function () {
     $(".nav-container .hotel").css("color", "black");
     $(".nav-container .hotel-show").css("color", "black");
     $(".nav-icon span").removeClass("white").addClass("black");
-    $(".d-flex a").css("color", "#083a08");
+    $(".icon a").css("color", "#083a08");
+    $(".dropbtn").css("color", "black");
 
     $(".hotel").show();
   }

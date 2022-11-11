@@ -126,7 +126,7 @@ p:first-letter {
 
 p {
   font-size: 16px;
-  font-family: "Quicksand";
+  font-family: "Playfair display";
   font-weight: 500;
   text-align: center;
   margin-left: 65px;
@@ -436,7 +436,7 @@ a.contact {
 
 .grey {
   background-color: black;
-  opacity: 0.8;
+  // opacity: 0.8;
   .hotel .test {
     display: none;
   }
@@ -700,7 +700,7 @@ a.contact {
       top: 0;
       left: 0;
       width: 100%;
-      @include img(url(../img/1a.jpeg));
+      @include img(url(../img/04.jpg));
       background-position: center;
       // animation: intro1 10s forwards infinite;
       // box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.3);
@@ -1693,7 +1693,7 @@ a.contact {
   }
   // #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
   #parallax-world-of-ugg p {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Playfair display";
     font-weight: 500;
     font-size: 16px;
     text-align: center;

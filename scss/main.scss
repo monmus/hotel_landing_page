@@ -101,7 +101,7 @@ $footer-text-clr: #fff;
 
 /* ----- fonts ----- */
 
-$text: "Noto Sans";
+$text: "Playfair display";
 $header: "Julius Sans One";
 $header-2: "Pacifico";
 
@@ -158,7 +158,7 @@ a.contact {
   font-size: 15px;
   font-weight: 500;
   color: rgb(19, 17, 17);
-  font-family: "Work Sans";
+  font-family: "Playfair display";
 }
 
 * {
@@ -215,7 +215,7 @@ a.contact {
   background-color: transparent;
   // color: $p-light-clr;
   font-size: 1.25em;
-  font-family: "Dancing Script", cursive;
+  font-family: "Playfair display", cursive;
   @include transition(0.3s);
   padding: 5px 10px;
   overflow: auto;
@@ -248,7 +248,7 @@ a.contact {
   }
 
   .hotel {
-    font-family: $text;
+    font-family: great vibes;
     margin: 2px;
     padding: 10px;
     font-size: 29px;
@@ -257,7 +257,6 @@ a.contact {
     position: relative;
     justify-content: center;
     align-items: center;
-    font-family: "Great Vibes", cursive;
 
     img {
       display: flex;
@@ -265,7 +264,6 @@ a.contact {
     }
   }
   .hotel-show {
-    font-family: $text;
     margin: 2px;
     padding: 10px;
     font-size: 29px;
@@ -274,7 +272,7 @@ a.contact {
     position: relative;
     justify-content: center;
     align-items: center;
-    font-family: "Great Vibes", cursive;
+    font-family: "Great vibes", cursive;
 
     img {
       display: flex;
@@ -597,7 +595,7 @@ a.contact {
       position: relative;
       justify-content: center;
       align-items: center;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
     }
   }
 
@@ -640,7 +638,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -673,7 +671,7 @@ a.contact {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
       font-size: 40px;
       text-align: center;
       &:hover {
@@ -1015,7 +1013,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -1048,7 +1046,7 @@ a.contact {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
       font-size: 40px;
       text-align: center;
       &:hover {
@@ -1096,7 +1094,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -1129,7 +1127,7 @@ a.contact {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
       font-size: 40px;
       text-align: center;
       &:hover {
@@ -1183,7 +1181,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -1216,7 +1214,7 @@ a.contact {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
       font-size: 40px;
       text-align: center;
       &:hover {
@@ -1285,7 +1283,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -1316,7 +1314,7 @@ a.contact {
       margin: auto;
       color: $p-light-clr;
       padding: 0;
-      font-family: "Great Vibes", cursive;
+      font-family: "Playfair display", cursive;
       font-size: 40px;
       &:hover {
         color: $p-light-clr;
@@ -1382,7 +1380,7 @@ a.contact {
     margin: 10px;
     color: grey;
     font-weight: 500;
-    font-family: "Work Sans";
+    font-family: "Playfair display";
     &:hover {
       color: black;
       cursor: pointer;
@@ -2250,7 +2248,7 @@ a.contact {
       .header {
         font-weight: 500;
         text-align: center;
-        font-family: "Great Vibes", cursive;
+        font-family: "Great vibes", cursive;
         font-size: 30px;
         padding: 10px;
       }
@@ -2309,7 +2307,7 @@ a.contact {
           font-size: 15px;
           font-weight: 500;
           color: rgb(19, 17, 17);
-          font-family: "Work Sans";
+          font-family: "Playfair display";
           text-align: center;
         }
       }
@@ -2317,13 +2315,13 @@ a.contact {
       .center1 {
         display: flex;
         flex-direction: column;
-        font-family: "Work Sans";
+        font-family: "Playfair display";
         font-weight: 500;
         color: rgb(19, 17, 17);
 
         p {
           text-align: left;
-          font-family: "Work Sans";
+          font-family: "Playfair display";
           color: rgb(19, 17, 17);
           font-weight: 400;
           font-size: 17px;
@@ -2331,7 +2329,7 @@ a.contact {
 
         .formField {
           width: 87%;
-          font-family: "Work Sans";
+          font-family: "Playfair display";
           border-bottom: 1px solid #ccc;
           border-top: 1px #ccc;
           border-left: 1px #ccc;

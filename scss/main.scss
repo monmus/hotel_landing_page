@@ -1140,6 +1140,12 @@ a.contact {
 
   //oferta - wyciag
 
+  .stok {
+    @media screen and (max-width: 480px) and (min-width: 370px) {
+      width: 100% !important;
+    }
+  }
+
   .intro_static.stacja_narciarska {
     @include flex(column, nowrap, center);
     align-items: center;
@@ -2391,6 +2397,7 @@ a.contact {
     flex-direction: row;
     p {
       font-size: 10px;
+      margin-bottom: 0;
     }
   }
 }

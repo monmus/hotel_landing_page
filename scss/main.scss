@@ -131,6 +131,7 @@ p {
   text-align: center;
   margin-left: 65px;
   margin-right: 65px;
+  line-height: 25px;
 
   @media screen and (max-width: 480px) and (min-width: 370px) {
     font-size: 16px;
@@ -182,8 +183,9 @@ a.contact {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: darkgrey;
   min-width: 160px;
+  height: 80px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   right: -15px;
@@ -230,6 +232,9 @@ a.contact {
   }
 }
 
+.icon a {
+  color: #083a08;
+}
 /* ----- top navigation ----- */
 .nav-container {
   justify-content: end;
@@ -353,10 +358,6 @@ a.contact {
           transform: scaleX(1);
         }
       }
-    }
-
-    .icon a {
-      color: #083a08;
     }
 
     // Hamburger menu icon
@@ -1702,7 +1703,7 @@ a.contact {
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    line-height: 1.2em;
+    line-height: 25px;
   }
   #parallax-world-of-ugg p:first-letter {
     font-size: 20px;

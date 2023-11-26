@@ -127,7 +127,7 @@ $(window).scroll(function () {
     $(".nav-container .hotel").css("color", "black");
     $(".nav-container .hotel-show").css("color", "black");
     $(".nav-icon span").removeClass("white").addClass("black");
-    $(".icon a").css("color", "#083a08");
+    $(".icon a").css("color", "black");
     $(".dropbtn").css("color", "black");
 
     $(".hotel").show();

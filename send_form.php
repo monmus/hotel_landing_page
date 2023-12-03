@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(6143);
 ini_set("display_errors","on");
@@ -13,7 +14,7 @@ if($name && $email && $phone && $message){
  $message_body.="Adres email: $email\n";
  $message_body.="Numer telefonu: $phone\n\n";
  $message_body.=$message;
- if(mail("monikmusial@gmail.com","Formularz kontaktowy",$message_body,$headers)){
+ if(mail("usteni@z-ne.pl","Formularz kontaktowy",$message_body,$headers)){
  $json=array("status"=>1,"msg"=>"<p class='status_ok'>Twój formularz został pomyślnie wysłany.</p>");
  }
  else{
@@ -26,4 +27,6 @@ else{
 echo json_encode($json);
 exit;
 ?>
+
+
 

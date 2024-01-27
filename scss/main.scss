@@ -688,7 +688,7 @@ a.contact {
       top: 0;
       left: 0;
       width: 100%;
-      @include img(url(../img/04.jpg));
+      @include img(url(../img/oferta_apartamenty.jpg));
       background-position: center;
     }
 
@@ -1666,7 +1666,7 @@ a.contact {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url("../img/oferta3.jpg");
+    background-image: url("../img/oferta_02.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -2599,7 +2599,7 @@ a.contact {
       flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
-      width: 60%;
+      // width: 60%;
       img {
         padding: 5px;
       }
